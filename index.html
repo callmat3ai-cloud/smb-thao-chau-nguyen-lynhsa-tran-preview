@@ -1,434 +1,2214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thao Chau Nguyen - Lynhsa Tran | Monterey Park, CA</title>
-  <meta name="description" content="Thao Chau Nguyen - Lynhsa Tran — professional Cleaning Service services in Monterey Park, CA." />
-  <meta property="og:title" content="Thao Chau Nguyen - Lynhsa Tran | Monterey Park, CA" />
-  <meta property="og:description" content="Professional Cleaning Service services in Monterey Park, CA." />
-  <meta property="og:image" content="/tmp/agy_images/THAO-LYNHSA-0601/hero.webp" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thao Chau Nguyen - Lynhsa Tran | Minimalist Nail Salon Monterey Park, CA</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Welcome to Thao Chau Nguyen & Lynhsa Tran, a Scandinavian-inspired minimalist nail salon in Monterey Park, CA. Experience organic, non-toxic luxury nail care. Walk-ins welcome.">
+  <meta name="keywords" content="Thao Chau Nguyen, Lynhsa Tran, nail salon Monterey Park, minimal nail salon, organic nail care, gel manicure, acrylic sets, dip powder, pedicure, nail art, paraffin wax CA">
+  <meta name="author" content="Thao Chau Nguyen & Lynhsa Tran">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="file:///tmp/sites/thao-chau-nguyen-lynhsa-tran/index.html">
+  <meta property="og:title" content="Thao Chau Nguyen - Lynhsa Tran | Minimalist Nail Salon">
+  <meta property="og:description" content="Experience slow beauty at Monterey Park's premier Scandinavian-inspired nail studio. Specializing in organic, non-toxic luxury nail services.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="file:///tmp/sites/thao-chau-nguyen-lynhsa-tran/index.html">
+  <meta property="twitter:title" content="Thao Chau Nguyen - Lynhsa Tran | Minimalist Nail Salon">
+  <meta property="twitter:description" content="Experience slow beauty at Monterey Park's premier Scandinavian-inspired nail studio. Specializing in organic, non-toxic luxury nail services.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Favicon (base64 SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Sora', sans-serif;
-      color: #2a1f1a;
-      background: #FDFAF6;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    /* --------------------------------------------------
+       1. DESIGN SYSTEM & CSS VARIABLES
+       -------------------------------------------------- */
     :root {
-      --accent:      #0e9f6e;
-      --accent-dark: #047857;
-      --accent-bg:   #0e9f6e14;
-      --ink:         #2a1f1a;
-      --ink-2:       #6b5c50;
-      --ink-3:       #a09590;
-      --cream-1:     #FDFAF6;
-      --cream-2:     #F5EFE6;
-      --cream-3:     #EDE5D8;
-      --border:      #e5ddd5;
-      --white:       #ffffff;
+      /* Palette: Sage, Cream, Soft Rose, Warm Clay, Charcoal */
+      --color-bg-primary: #FAF8F5;       /* Delicate cream background */
+      --color-bg-secondary: #F2EFE9;     /* Soft warm gray for contrast */
+      --color-bg-tertiary: #E6E2DA;      /* Muted accent gray for borders */
+      
+      --color-text-primary: #2C3531;     /* Deep charcoal-sage for headings & high-contrast copy */
+      --color-text-secondary: #5D6660;   /* Slate charcoal for body copy */
+      --color-text-muted: #858E88;       /* Subtle gray-green for descriptions/captions */
+      
+      --color-accent-sage: #8FA89B;      /* Scandinavian sage green */
+      --color-accent-rose: #E6C5C0;      /* Gentle pastel rose */
+      --color-accent-clay: #D8A48F;      /* Soft warm clay/terracotta */
+      
+      /* Typography */
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      
+      /* Transitions */
+      --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: all 0.3s ease;
+      
+      /* Elevation */
+      --shadow-soft: 0 10px 40px rgba(44, 53, 49, 0.02);
+      --shadow-medium: 0 20px 50px rgba(44, 53, 49, 0.05);
+      --shadow-premium: 0 30px 80px rgba(44, 53, 49, 0.06);
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
+    /* --------------------------------------------------
+       2. BASE STYLE & CUSTOM SCROLL/CURSOR
+       -------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    /* ===== TOP BAR ===== */
-    .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: clamp(12px, 3vw, 16px) clamp(16px, 5vw, 48px);
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--color-bg-primary);
+      color: var(--color-text-secondary);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-    .topbar-inner {
-      max-width: 960px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .topbar-brand { font-size: clamp(0.9rem, 3vw, 1.05rem); font-weight: 700; color: var(--ink); }
-    .topbar-phone {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent);
-      color: #fff;
-      font-size: clamp(0.75rem, 2.5vw, 0.88rem);
-      font-weight: 700;
-      padding: clamp(7px, 2vw, 10px) clamp(14px, 3vw, 20px);
-      border-radius: 99px;
-      transition: background 0.15s;
-    }
-    .topbar-phone:hover { background: var(--accent-dark); }
 
-    /* ===== HERO — split layout, business image left ===== */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: clamp(380px, 60vw, 560px);
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-color: var(--color-bg-primary);
     }
-    .hero-img-col {
-      background-image: url('/tmp/agy_images/THAO-LYNHSA-0601/hero.webp');
-      background-size: cover;
-      background-position: center;
-      min-height: clamp(200px, 35vw, 320px);
+
+    /* Target Offset for sticky header navigation */
+    :target {
+      scroll-margin-top: 100px;
     }
-    .hero-text-col {
-      background: var(--white);
-      display: flex; flex-direction: column; justify-content: center;
-      padding: clamp(32px, 6vw, 64px) clamp(24px, 5vw, 56px);
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-    .hero-badge {
-      display: inline-block;
-      background: var(--accent-bg);
-      color: var(--accent);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
+    ::-webkit-scrollbar-track {
+      background: var(--color-bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-bg-tertiary);
       border-radius: 4px;
-      margin-bottom: clamp(14px, 3vw, 20px);
     }
-    .hero h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      margin-bottom: clamp(10px, 2vw, 14px);
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-accent-sage);
     }
-    .hero-sub {
-      font-size: clamp(0.88rem, 2.5vw, 1.05rem);
-      color: var(--ink-2);
-      margin-bottom: clamp(18px, 3vw, 26px);
-      line-height: 1.55;
+
+    /* Custom Interactive Cursor (Desktop) */
+    body {
+      cursor: none;
     }
-    .hero-rating {
-      display: inline-flex; align-items: center; gap: 8px;
+    a, button, select, input, textarea, .filter-btn, .logo, .slider-dot {
+      cursor: none !important;
+    }
+
+    .custom-cursor {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-text-primary);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    }
+
+    .custom-cursor-follower {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--color-accent-sage);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .custom-cursor.hovering {
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-accent-rose);
+    }
+
+    .custom-cursor-follower.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: var(--color-accent-rose);
+      background-color: rgba(230, 197, 192, 0.08);
+    }
+
+    @media (max-width: 1024px) {
+      body {
+        cursor: auto;
+      }
+      a, button, select, input, textarea, .filter-btn, .logo, .slider-dot {
+        cursor: auto !important;
+      }
+      .custom-cursor, .custom-cursor-follower {
+        display: none !important;
+      }
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+    }
+
+    /* --------------------------------------------------
+       3. BACKGROUND DECORATIONS
+       -------------------------------------------------- */
+    .bg-decorations {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4rem;
+    }
+
+    .grid-line {
+      width: 1px;
+      height: 100%;
+      background-color: rgba(44, 53, 49, 0.015);
+    }
+
+    @media (max-width: 768px) {
+      .bg-decorations {
+        padding: 0 1.5rem;
+      }
+      .grid-line:nth-child(2) {
+        display: none;
+      }
+    }
+
+    /* --------------------------------------------------
+       4. SCROLL-TRIGGERED ANIMATIONS (IntersectionObserver)
+       -------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .delay-400 { transition-delay: 0.4s; }
+
+    /* --------------------------------------------------
+       5. HEADER & NAVIGATION
+       -------------------------------------------------- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(250, 248, 245, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(44, 53, 49, 0.04);
+      padding: 1.5rem 0;
+      transition: var(--transition-fast);
+    }
+
+    header.scrolled {
+      padding: 1rem 0;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo Styling */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--color-text-primary);
+    }
+    
+    .logo-main {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    
+    .logo-sub {
+      font-family: var(--font-serif);
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      color: var(--color-accent-sage);
+      margin-top: 0.15rem;
+      font-weight: 400;
+    }
+
+    /* Desktop Nav links with hover underline animation */
+    .desktop-nav {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-family: var(--font-sans);
       font-size: 0.85rem;
-      color: var(--ink-2);
-      margin-bottom: clamp(20px, 4vw, 28px);
-      display: none;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: var(--transition-fast);
     }
-    .hero-stars { color: #f59e0b; letter-spacing: 1px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: var(--accent);
-      color: #fff;
-      font-size: clamp(0.82rem, 2.5vw, 0.95rem);
-      font-weight: 700;
-      padding: clamp(10px, 2vw, 13px) clamp(16px, 3.5vw, 22px);
-      border-radius: 8px;
-      transition: background 0.15s, transform 0.15s;
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-accent-sage);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--border);
-      font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+
+    .nav-link:hover {
+      color: var(--color-accent-sage);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Book CTA in Navbar */
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-text-primary);
+      color: var(--color-text-primary);
+      text-decoration: none;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: clamp(10px, 2vw, 13px) clamp(16px, 3.5vw, 22px);
-      border-radius: 8px;
-      transition: border-color 0.15s, color 0.15s;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 50px;
+      background: transparent;
+      transition: var(--transition-fast);
     }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ===== WRAP ===== */
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
-    .wrap--narrow { max-width: 680px; }
+    .nav-cta:hover {
+      background-color: var(--color-text-primary);
+      color: var(--color-bg-primary);
+    }
 
-    /* ===== SECTIONS ===== */
-    .section { padding: clamp(48px, 8vw, 80px) 0; }
-    .section--tinted { background: var(--cream-2); }
-    .section--white  { background: var(--white); }
-    .section-header { margin-bottom: clamp(24px, 4vw, 36px); }
-    .section-label {
-      font-size: 0.68rem;
-      font-weight: 700;
+    /* Mobile Hamburger Trigger */
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      z-index: 1100;
+    }
+
+    .nav-toggle span {
+      display: block;
+      position: absolute;
+      height: 1.5px;
+      width: 100%;
+      background: var(--color-text-primary);
+      left: 0;
+      transition: var(--transition-fast);
+    }
+
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { bottom: 0; }
+
+    .nav-toggle.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--color-bg-primary);
+      z-index: 1050;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+    }
+
+    .mobile-nav-overlay.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .mobile-link {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      text-decoration: none;
+      color: var(--color-text-primary);
+      letter-spacing: 0.05em;
+      transition: var(--transition-fast);
+    }
+
+    .mobile-link:hover {
+      color: var(--color-accent-sage);
+      transform: translateY(-2px);
+    }
+
+    .mobile-nav-cta {
+      margin-top: 3.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .desktop-nav, .nav-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+
+    /* Prevent scrolling when menu is open */
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    /* --------------------------------------------------
+       6. HERO SECTION
+       -------------------------------------------------- */
+    .hero {
+      position: relative;
+      background-color: var(--color-bg-primary);
+      overflow: hidden;
+      padding: 13rem 0 9rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-tagline-badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(143, 168, 155, 0.12);
+      border: 1px solid rgba(143, 168, 155, 0.2);
+      color: var(--color-text-primary);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
+      margin-bottom: 2.5rem;
     }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 1.1;
+      font-weight: 300;
+      color: var(--color-text-primary);
+      margin-bottom: 2rem;
+      max-width: 750px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-accent-sage);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+      margin-bottom: 3.5rem;
+      max-width: 620px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 5.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background-color: var(--color-text-primary);
+      color: var(--color-bg-primary);
+      border: 1px solid var(--color-text-primary);
+      padding: 1.15rem 2.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-accent-sage);
+      border-color: var(--color-accent-sage);
+      color: var(--color-text-primary);
+      box-shadow: 0 15px 30px rgba(143, 168, 155, 0.3);
+    }
+
+    .btn-primary svg {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: var(--transition-fast);
+    }
+
+    .btn-secondary::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-text-primary);
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-secondary:hover {
+      color: var(--color-accent-sage);
+    }
+
+    .btn-secondary:hover::after {
+      background-color: var(--color-accent-sage);
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+
+    /* Centered Image with Soft Shadow & Framing */
+    .hero-image-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero-image-backdrop {
+      position: absolute;
+      top: 1.5rem;
+      left: 3.5rem;
+      right: 0.5rem;
+      bottom: -1.5rem;
+      background-color: var(--color-bg-secondary);
+      border: 1px solid var(--color-bg-tertiary);
+      border-radius: 8px;
+      z-index: 1;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 8px;
+      z-index: 2;
+      box-shadow: var(--shadow-premium);
+      transition: var(--transition-smooth);
+      display: block;
+    }
+
+    .hero-image-container:hover .hero-img {
+      transform: translateY(-5px);
+      box-shadow: 0 40px 90px rgba(44, 53, 49, 0.08);
+    }
+
+    .hero-image-container:hover .hero-image-backdrop {
+      transform: translate(-10px, 10px);
+    }
+
+    /* Floating Studio Card Badge */
+    .floating-badge {
+      position: absolute;
+      bottom: -2rem;
+      right: 0;
+      background-color: var(--color-bg-primary);
+      border: 1px solid var(--color-bg-tertiary);
+      padding: 1.5rem 2rem;
+      z-index: 3;
+      box-shadow: var(--shadow-medium);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 220px;
+    }
+
+    .badge-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--color-text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .badge-detail {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 992px) {
+      .hero {
+        padding: 9.5rem 0 6rem;
+      }
+      .hero-buttons {
+        margin-bottom: 4rem;
+      }
+      .hero-image-backdrop {
+        top: 1rem;
+        left: 2.5rem;
+        right: 0.5rem;
+        bottom: -1rem;
+      }
+      .floating-badge {
+        bottom: -1rem;
+        right: 1rem;
+        padding: 1rem 1.5rem;
+        min-width: 180px;
+      }
+    }
+
+    /* --------------------------------------------------
+       7. SERVICES SECTION (Clean List Layout with Illustrations)
+       -------------------------------------------------- */
+    .services-section {
+      padding: 9rem 0;
+      background-color: var(--color-bg-primary);
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 5rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--color-accent-sage);
+      margin-bottom: 1.25rem;
+      display: inline-block;
+      font-weight: 600;
+    }
+
     .section-title {
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 700;
-      color: var(--ink);
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--color-text-primary);
       line-height: 1.2;
     }
 
-    /* ===== SERVICES — illustrated cards ===== */
-    .services-grid {
+    /* Curated Interactive Filters */
+    .services-filter {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--color-bg-tertiary);
+      padding: 0.8rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 50px;
+      color: var(--color-text-primary);
+      transition: var(--transition-fast);
+    }
+
+    .filter-btn:hover {
+      background-color: var(--color-bg-secondary);
+      border-color: var(--color-text-primary);
+    }
+
+    .filter-btn.active {
+      background-color: var(--color-text-primary);
+      color: var(--color-bg-primary);
+      border-color: var(--color-text-primary);
+    }
+
+    /* Services Clean List Styling */
+    .services-list {
+      max-width: 950px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-item {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-      gap: clamp(14px, 2.5vw, 20px);
+      grid-template-columns: 80px 1fr 120px 160px;
+      align-items: center;
+      padding: 3rem 0;
+      border-bottom: 1px solid rgba(44, 53, 49, 0.08);
+      transition: var(--transition-smooth);
     }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(20px, 3.5vw, 28px);
-      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+
+    .service-item:hover {
+      transform: translateX(8px);
     }
-    .service-card:hover {
-      box-shadow: 0 8px 32px rgba(42, 31, 26, 0.1);
-      transform: translateY(-4px);
-      border-color: var(--accent);
+
+    .service-illustration {
+      color: var(--color-accent-sage);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: var(--transition-smooth);
     }
-    .service-icon {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-      line-height: 1;
-      margin-bottom: clamp(12px, 2vw, 16px);
+
+    .service-item:hover .service-illustration {
+      color: var(--color-accent-rose);
+      transform: scale(1.1) rotate(5deg);
     }
-    .service-card h3 {
-      font-size: clamp(0.88rem, 2.5vw, 1rem);
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 6px;
-      line-height: 1.3;
+
+    .service-details {
+      padding-right: 3rem;
     }
-    .service-card p {
-      font-size: clamp(0.78rem, 2vw, 0.85rem);
-      color: var(--ink-2);
+
+    .service-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-item-title {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--color-text-primary);
+    }
+
+    .service-item-desc {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
       line-height: 1.6;
     }
 
-    /* ===== INFO STRIP ===== */
-    .info-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-      gap: clamp(12px, 2vw, 16px);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(20px, 3.5vw, 28px);
+    .service-item-price {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
     }
-    .info-item {}
-    .info-item-label {
-      font-size: 0.65rem;
+
+    .service-item-action {
+      text-align: right;
+    }
+
+    .book-service-btn {
+      text-decoration: none;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--ink-3);
-      margin-bottom: 6px;
+      color: var(--color-text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: var(--transition-fast);
     }
-    .info-item-value {
-      font-size: clamp(0.88rem, 2.5vw, 0.98rem);
-      color: var(--ink);
-      font-weight: 500;
+
+    .book-service-btn svg {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .book-service-btn:hover {
+      color: var(--color-accent-sage);
+    }
+
+    .book-service-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .service-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 0;
+        text-align: center;
+      }
+      
+      .service-illustration {
+        justify-content: center;
+      }
+      
+      .service-details {
+        padding-right: 0;
+      }
+
+      .service-title-row {
+        justify-content: center;
+      }
+      
+      .service-item-action {
+        text-align: center;
+      }
+      
+      .services-section {
+        padding: 6rem 0;
+      }
+    }
+
+    /* --------------------------------------------------
+       8. ABOUT SECTION (Our Philosophy)
+       -------------------------------------------------- */
+    .about-section {
+      background-color: var(--color-bg-secondary);
+      padding: 9rem 0;
+      position: relative;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-content {
+      max-width: 550px;
+    }
+
+    .about-text {
+      font-family: var(--font-sans);
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .about-text:last-of-type {
+      margin-bottom: 3rem;
+    }
+
+    /* Overlapping Editorial Art Collage */
+    .about-collage {
+      position: relative;
+      width: 100%;
+      height: 520px;
+    }
+
+    .collage-img-main {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 72%;
+      height: 82%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: var(--shadow-medium);
+      transition: var(--transition-smooth);
+    }
+
+    .collage-img-sub {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58%;
+      height: 60%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: var(--shadow-premium);
+      border: 8px solid var(--color-bg-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .about-collage:hover .collage-img-main {
+      transform: scale(1.02) translate(-5px, -5px);
+    }
+
+    .about-collage:hover .collage-img-sub {
+      transform: scale(1.03) translate(5px, 5px);
+    }
+
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+      }
+      .about-content {
+        max-width: 100%;
+      }
+      .about-collage {
+        height: 420px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .about-section {
+        padding: 6rem 0;
+      }
+    }
+
+    /* --------------------------------------------------
+       9. TESTIMONIALS SECTION
+       -------------------------------------------------- */
+    .testimonials-section {
+      padding: 9rem 0;
+      text-align: center;
+      background-color: var(--color-bg-primary);
+    }
+
+    .testimonials-slider-container {
+      max-width: 850px;
+      margin: 4.5rem auto 0;
+      position: relative;
+    }
+
+    .testimonials-slider {
+      position: relative;
+      min-height: 240px;
+    }
+
+    .testimonial-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .testimonial-slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
       line-height: 1.45;
+      color: var(--color-text-primary);
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
     }
-    .info-item a.info-link {
-      color: var(--accent);
+
+    .testimonial-quote::before, .testimonial-quote::after {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      color: rgba(143, 168, 155, 0.2);
+      line-height: 0;
+      position: relative;
+    }
+    
+    .testimonial-quote::before {
+      content: '“';
+      top: 0.8rem;
+      margin-right: 0.5rem;
+    }
+
+    .testimonial-quote::after {
+      content: '”';
+      top: 1.5rem;
+      margin-left: 0.5rem;
+    }
+
+    .testimonial-author {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
       font-weight: 600;
     }
-    .info-item a.info-link:hover { opacity: 0.8; }
 
-    /* ===== MAP ===== */
-    .map-wrap {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      margin-top: clamp(16px, 3vw, 24px);
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3.5rem;
     }
-    .map-wrap iframe { width: 100%; height: clamp(200px, 28vw, 280px); border: 0; display: block; }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--ink);
-      padding: clamp(28px, 5vw, 44px) clamp(16px, 4vw, 48px);
-      text-align: center;
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-bg-tertiary);
+      border: none;
+      padding: 0;
+      transition: var(--transition-fast);
     }
-    .footer-inner { max-width: 960px; margin: 0 auto; }
-    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.8; }
-    footer a { color: rgba(255,255,255,0.6); transition: color 0.15s; }
-    footer a:hover { color: rgba(255,255,255,0.9); }
 
-    /* ===== STICKY BAR ===== */
-    .sticky-bar {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: rgba(253, 250, 246, 0.97);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
-      padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 24px);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      z-index: 100;
-      box-shadow: 0 -4px 24px rgba(42, 31, 26, 0.08);
+    .slider-dot:hover {
+      background-color: var(--color-text-muted);
     }
-    .sticky-bar-info { min-width: 0; }
-    .sticky-bar-name {
-      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-      font-weight: 700;
-      color: var(--ink);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .sticky-bar-phone { font-size: clamp(0.7rem, 2vw, 0.78rem); color: var(--ink-2); }
-    .sticky-cta {
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-      padding: clamp(8px, 2vw, 11px) clamp(16px, 3vw, 22px);
-      border-radius: 8px;
-      white-space: nowrap; flex-shrink: 0;
-      display: flex; align-items: center; gap: 6px;
-      transition: background 0.15s;
-    }
-    .sticky-cta:hover { background: var(--accent-dark); }
-    .pad-bottom { height: clamp(64px, 10vw, 80px); }
 
-    /* ===== MOBILE — stack hero ===== */
-    @media (max-width: 640px) {
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: unset;
+    .slider-dot.active {
+      background-color: var(--color-text-primary);
+      transform: scale(1.3);
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 6rem 0;
       }
-      .hero-img-col { min-height: clamp(200px, 50vw, 280px); }
-      .hero-text-col { padding: clamp(24px, 6vw, 36px) clamp(16px, 5vw, 24px); }
-      .services-grid { grid-template-columns: 1fr; }
-      .info-strip { grid-template-columns: 1fr; }
+      .testimonials-slider {
+        min-height: 280px;
+      }
     }
 
-    @media (max-width: 380px) {
-      .topbar-inner { flex-wrap: wrap; }
+    /* --------------------------------------------------
+       10. CONTACT & RESERVATION SECTION
+       -------------------------------------------------- */
+    .contact-section {
+      padding: 9rem 0 5rem;
+      background-color: var(--color-bg-primary);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-      html { scroll-behavior: auto; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 6.5rem;
+    }
+
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-details {
+      margin: 3.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .contact-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-color: var(--color-bg-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--color-accent-sage);
+      border: 1px solid rgba(44, 53, 49, 0.03);
+    }
+
+    .contact-label {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-text-muted);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .contact-value {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      display: block;
+      line-height: 1.3;
+    }
+
+    a.contact-value:hover {
+      color: var(--color-accent-sage);
+    }
+
+    /* Minimalist Interactive Inputs with Floating Labels */
+    .form-container {
+      background-color: var(--color-bg-primary);
+      position: relative;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 2.8rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.8rem 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--color-bg-tertiary);
+      color: var(--color-text-primary);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: var(--transition-fast);
+      border-radius: 0;
+    }
+
+    .form-label {
+      position: absolute;
+      top: 0.8rem;
+      left: 0;
+      color: var(--color-text-muted);
+      pointer-events: none;
+      transition: var(--transition-fast);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+    }
+
+    /* Custom validation & focus label states */
+    .form-input:focus ~ .form-label,
+    .form-input:not(:placeholder-shown) ~ .form-label,
+    .select-input:focus ~ .form-label,
+    .select-input:valid ~ .form-label {
+      top: -1.2rem;
+      font-size: 0.8rem;
+      color: var(--color-accent-sage);
+      letter-spacing: 0.05em;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-bottom: 1px solid var(--color-accent-sage);
+    }
+
+    /* Styled Select Option Dropdown */
+    .select-input {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%232C3531' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+    }
+
+    .textarea-input {
+      resize: none;
+    }
+
+    .submit-btn {
+      background-color: var(--color-text-primary);
+      color: var(--color-bg-primary);
+      border: none;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+      transition: var(--transition-smooth);
+    }
+
+    .submit-btn:hover {
+      background-color: var(--color-accent-sage);
+      color: var(--color-text-primary);
+      box-shadow: 0 15px 30px rgba(143, 168, 155, 0.3);
+    }
+
+    .submit-btn svg {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .submit-btn:hover svg {
+      transform: translateX(5px);
+    }
+
+    /* Styled Success Box */
+    .form-success-container {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      text-align: center;
+      padding: 3.5rem 2rem;
+      border: 1px dashed var(--color-accent-sage);
+      border-radius: 6px;
+      background-color: rgba(143, 168, 155, 0.03);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .success-icon {
+      color: var(--color-accent-sage);
+      margin-bottom: 1.5rem;
+    }
+
+    .success-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--color-text-primary);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .success-message {
+      font-family: var(--font-sans);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Grayscale/Sleek styled Map block */
+    .map-wrapper {
+      margin-top: 4.5rem;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-medium);
+      height: 400px;
+      border: 1px solid rgba(44, 53, 49, 0.05);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(1) contrast(1.1) brightness(0.95);
+      transition: var(--transition-smooth);
+    }
+
+    .map-wrapper:hover iframe {
+      filter: grayscale(0.2) contrast(1) brightness(1);
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+      }
+      .map-wrapper {
+        margin-top: 3.5rem;
+        height: 350px;
+      }
+      .contact-section {
+        padding: 6rem 0 3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    /* --------------------------------------------------
+       11. FOOTER
+       -------------------------------------------------- */
+    .footer {
+      position: relative;
+      background-color: var(--color-bg-primary);
+    }
+
+    .footer-wave {
+      width: 100%;
+      height: 70px;
+      margin-bottom: -5px; /* Offset gap */
+    }
+
+    .footer-wave svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .footer-content {
+      background-color: var(--color-bg-secondary);
+      padding: 6.5rem 0 3.5rem;
+      border-top: 1px solid rgba(44, 53, 49, 0.03);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr 0.7fr;
+      gap: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    .footer-brand-logo {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      letter-spacing: 0.18em;
+      color: var(--color-text-primary);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2.2rem;
+      max-width: 320px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--color-text-primary);
+      transition: var(--transition-fast);
+      text-decoration: none;
+      display: inline-flex;
+    }
+
+    .social-links a:hover {
+      color: var(--color-accent-sage);
+      transform: translateY(-2px);
+    }
+
+    .social-yelp {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--color-text-primary);
+      margin-bottom: 1.8rem;
+      font-weight: 500;
+    }
+
+    .hours-list, .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .hours-list li {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hours-note {
+      font-style: italic;
+      color: var(--color-accent-sage);
+      margin-top: 0.4rem;
+      font-size: 0.85rem !important;
+      display: block;
+    }
+
+    .footer-links a {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent-sage);
+      padding-left: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(44, 53, 49, 0.08);
+      padding-top: 2.2rem;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        margin-bottom: 4rem;
+      }
+      .footer-content {
+        padding: 5rem 0 3rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-brand">Thao Chau Nguyen - Lynhsa Tran</div>
-    <a href="tel:+1 626-202-4068" class="topbar-phone">📞 +1 626-202-4068</a>
+  <!-- --------------------------------------------------
+       BACKGROUND DECORATIVE GRID LINES
+       -------------------------------------------------- -->
+  <div class="bg-decorations" aria-hidden="true">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
   </div>
-</div>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-text-col">
-    <div class="hero-badge">Cleaning Service</div>
-    <h1>Thao Chau Nguyen - Lynhsa Tran</h1>
-    <p class="hero-sub">Professional Cleaning Service services in Monterey Park, CA. Reliable, thorough, and built on genuine 5-star reviews.</p>
-    <div class="hero-rating" style="display: none;">
-      <span class="hero-stars">★★★★★</span>
-      <span> ·  Google reviews</span>
+  <!-- --------------------------------------------------
+       CUSTOM INTERACTIVE CURSOR
+       -------------------------------------------------- -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" aria-hidden="true"></div>
+
+  <!-- --------------------------------------------------
+       HEADER & NAVIGATION BAR
+       -------------------------------------------------- -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <span class="logo-main">THAO CHAU NGUYEN</span>
+        <span class="logo-sub">LYNHSA TRAN</span>
+      </a>
+      
+      <nav class="desktop-nav">
+        <a href="#services" class="nav-link">Curated Services</a>
+        <a href="#about" class="nav-link">Our Philosophy</a>
+        <a href="#testimonials" class="nav-link">Guest Experience</a>
+        <a href="#contact" class="nav-link">Find Us</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta">Reserve Studio</a>
+
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div class="hero-actions">
-      <a href="tel:+1 626-202-4068" class="btn-primary">📞 Call Now</a>
-      <a href="#" target="_blank" rel="noopener" class="btn-outline">📍 See on Google</a>
-    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-links">
+      <a href="#services" class="mobile-link">Curated Services</a>
+      <a href="#about" class="mobile-link">Our Philosophy</a>
+      <a href="#testimonials" class="mobile-link">Guest Experience</a>
+      <a href="#contact" class="mobile-link">Find Us</a>
+      <a href="#contact" class="nav-cta mobile-nav-cta">Reserve Studio</a>
+    </nav>
   </div>
-  <div class="hero-img-col" aria-hidden="true"></div>
-</section>
 
-<!-- ===== SERVICES ===== -->
-<section class="section section--tinted">
-  <div class="wrap">
-    <div class="section-header">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Our Services</h2>
-    </div>
-    <div class="services-grid">
+  <main>
+    <!-- --------------------------------------------------
+         HERO SECTION (Centered Typography & Shadowed Image Below)
+         -------------------------------------------------- -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="hero-tagline-badge">Monterey Park, CA</div>
+          <h1 class="hero-title">Where time slows, and <em>beauty</em> unfolds.</h1>
+          <p class="hero-description">
+            An intimate, Scandinavian-inspired studio curated by Thao Chau Nguyen and Lynhsa Tran. We invite you to experience the luxury of mindful living, non-toxic botanicals, and meticulous craftsmanship.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn-primary">
+              <span>Explore Curated Menu</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#about" class="btn-secondary">Our Story</a>
+          </div>
+        </div>
 
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Regular Home Cleaning</h3>
-      <p>Weekly or bi-weekly cleaning to keep your home spotless and fresh.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Deep Cleaning</h3>
-      <p>Thorough top-to-bottom cleaning for kitchens, bathrooms, and all living areas.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Move-In / Move-Out Clean</h3>
-      <p>Get your space move-in ready or leave it spotless when you go.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Office & Commercial Clean</h3>
-      <p>Keep your workspace professional, sanitized, and employee-ready.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Post-Construction Clean</h3>
-      <p>Remove dust, debris, and residues after renovation or building work.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Eco-Friendly Options</h3>
-      <p>Green cleaning products available — safe for kids, pets, and the planet.</p>
-    </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== INFO + MAP ===== -->
-<section class="section section--white">
-  <div class="wrap wrap--narrow">
-    <div class="section-header">
-      <div class="section-label">Find Us</div>
-      <h2 class="section-title">Contact &amp; Location</h2>
-    </div>
-    <div class="info-strip">
-      <div class="info-item">
-        <div class="info-item-label">📍 Address</div>
-        <div class="info-item-value">2321 S Garfield Ave</div>
+        <div class="hero-image-container reveal delay-200">
+          <div class="hero-image-backdrop"></div>
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop" alt="Premium manicure detail, soft warm lighting, Scandinavian nail aesthetic" class="hero-img">
+          <div class="floating-badge">
+            <span class="badge-title">Walk-ins Welcome</span>
+            <span class="badge-detail">Tue — Sun / 10am — 7pm</span>
+          </div>
+        </div>
       </div>
-      <div class="info-item">
-        <div class="info-item-label">📞 Phone</div>
-        <div class="info-item-value"><a href="tel:+1 626-202-4068" class="info-link">+1 626-202-4068</a></div>
+    </section>
+
+    <!-- --------------------------------------------------
+         SERVICES SECTION (List Layout with SVG Illustrations)
+         -------------------------------------------------- -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Curated Offerings</span>
+          <h2 class="section-title">Nail therapies crafted to restore and refine.</h2>
+        </div>
+
+        <div class="services-filter reveal">
+          <button class="filter-btn active" data-filter="all">All Treatments</button>
+          <button class="filter-btn" data-filter="manicure">Manicures & Sets</button>
+          <button class="filter-btn" data-filter="pedicure">Pedicures</button>
+          <button class="filter-btn" data-filter="treatment">Restorative Art</button>
+        </div>
+
+        <div class="services-list">
+          <!-- Service 1: Gel Manicure -->
+          <div class="service-item manicure reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c-1.2 2.5-3.5 4.5-6.5 5.5 3 1 5.3 3 6.5 5.5 1.2-2.5 3.5-4.5 6.5-5.5-3-1-5.3-3-6.5-5.5z"/>
+                <path d="M12 14c-1.5 2-4.5 3-7.5 3.5 3 0.5 6 1.5 7.5 3.5 1.5-2 4.5-3 7.5-3.5-3-0.5-6-1.5-7.5-3.5z"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">Classic Gel Manicure</h3>
+              </div>
+              <p class="service-item-desc">
+                An expert treatment of cuticle grooming, precise shaping, and high-shine, non-toxic gel polish cured under LED lighting.
+              </p>
+            </div>
+            <div class="service-item-price">$45</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: Sculpted Acrylic Sets -->
+          <div class="service-item manicure reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h12l4 6-10 12L2 9z"/>
+                <path d="M11 3 8 9l4 12"/>
+                <path d="M13 3l3 9-4 9"/>
+                <path d="M2 9h20"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">Sculpted Acrylic Sets</h3>
+              </div>
+              <p class="service-item-desc">
+                Tailored extensions sculpted meticulously to match your desired length and styling. Finished with a luxury gel top coat.
+              </p>
+            </div>
+            <div class="service-item-price">$65</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: Signature Dip Powder -->
+          <div class="service-item manicure reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                <path d="m5 3 1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">Signature Dip Powder</h3>
+              </div>
+              <p class="service-item-desc">
+                An odor-free, lightweight system packed with nutrients. Strengthens natural nails and guarantees a durable, chip-resistant finish.
+              </p>
+            </div>
+            <div class="service-item-price">$55</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4: The Botanical Pedicure -->
+          <div class="service-item pedicure reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2Z"/>
+                <path d="M9 22v-4M19 2s-3.5 5-9 6"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">The Botanical Pedicure</h3>
+              </div>
+              <p class="service-item-desc">
+                A warm bath with mineral salts, gentle organic sugar scrub, skin-replenishing mud mask, hot stone stimulation, and organic skin hydration.
+              </p>
+            </div>
+            <div class="service-item-price">$70</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5: Artisan Hand-Painted Art -->
+          <div class="service-item treatment reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19C5.3411 19.49 6.08252 19.3879 6.44299 18.8252L7.33333 17.4359C7.63661 16.9625 8.16368 16.6775 8.73038 16.6775H10.1538C11.1735 16.6775 12 15.8509 12 14.8312C12 14.3417 12.3966 13.9451 12.8862 13.9451H15.1538C16.1735 13.9451 17 13.1186 17 12.0989V11.1374"/>
+                <circle cx="7.5" cy="10.5" r="1" fill="currentColor"/>
+                <circle cx="11.5" cy="7.5" r="1" fill="currentColor"/>
+                <circle cx="16.5" cy="9.5" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">Artisan Nail Art</h3>
+              </div>
+              <p class="service-item-desc">
+                Custom hand-painted designs from clean geometric patterns, negative space art, encapsulated foils, to delicate minimalist detailings.
+              </p>
+            </div>
+            <div class="service-item-price">$20+</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6: Paraffin & Organic Oil Therapy -->
+          <div class="service-item treatment reveal">
+            <div class="service-illustration">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z"/>
+              </svg>
+            </div>
+            <div class="service-details">
+              <div class="service-title-row">
+                <h3 class="service-item-title">Paraffin & Organic Care</h3>
+              </div>
+              <p class="service-item-desc">
+                A warm wrap of soothing, botanical paraffin wax combined with nourishing organic essential oils to heal, soften, and repair skin.
+              </p>
+            </div>
+            <div class="service-item-price">$40</div>
+            <div class="service-item-action">
+              <a href="#contact" class="book-service-btn">
+                <span>Book Now</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="info-item">
-        <div class="info-item-label">🕐 Service Area</div>
-        <div class="info-item-value">Monterey Park, CA &amp; surrounding areas</div>
+    </section>
+
+    <!-- --------------------------------------------------
+         ABOUT SECTION
+         -------------------------------------------------- -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-content reveal-left">
+          <span class="section-subtitle">Our Philosophy</span>
+          <h2 class="section-title">Creating space for slow, honest self-care.</h2>
+          <p class="about-text">
+            Thao Chau Nguyen and Lynhsa Tran founded their Monterey Park sanctuary on the belief that nail care should be an restorative pause in your day, not a rushed errand. 
+          </p>
+          <p class="about-text">
+            Taking inspiration from Scandinavian designs of simplicity, utility, and comfort, the studio creates a calming space with warm lighting, botanical scents, and clean lines. We work exclusively with high-quality, organic, and toxin-free formulations to safeguard the wellness of your natural nails.
+          </p>
+          <a href="#contact" class="btn-primary">Reserve Your Experience</a>
+        </div>
+
+        <div class="about-collage reveal-right">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Minimalist beauty studio setup interior" class="collage-img-main">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Botanical oils and natural skincare hand treatment details" class="collage-img-sub">
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------
+         TESTIMONIALS SECTION
+         -------------------------------------------------- -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <span class="section-subtitle">Guest Reviews</span>
+        <h2 class="section-title">Shared Experiences</h2>
+
+        <div class="testimonials-slider-container reveal">
+          <div class="testimonials-slider">
+            <!-- Review 1 -->
+            <div class="testimonial-slide active">
+              <p class="testimonial-quote">
+                The most serene salon experience I've ever had. Thao and Lynhsa have created a true sanctuary in Monterey Park. The attention to detail in their gel manicures is unmatched.
+              </p>
+              <cite class="testimonial-author">— Sophia Chen</cite>
+            </div>
+            <!-- Review 2 -->
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">
+                I love their organic nail care philosophy. The botanical pedicure felt incredibly luxurious, and my nails have never looked healthier. A Scandinavian gem in CA!
+              </p>
+              <cite class="testimonial-author">— Elena Rostova</cite>
+            </div>
+            <!-- Review 3 -->
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">
+                Their artisan nail art is incredible. I brought a complex design, and they executed it with absolute precision and elegance. Highly recommend booking in advance.
+              </p>
+              <cite class="testimonial-author">— Marcus Vance</cite>
+            </div>
+            <!-- Review 4 -->
+            <div class="testimonial-slide">
+              <p class="testimonial-quote">
+                From the soft lighting to the sage-cream aesthetic, everything here whispers calm. It is the only place I trust with my acrylic sets now.
+              </p>
+              <cite class="testimonial-author">— Clara Montgomery</cite>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-dot active" data-slide="0" aria-label="Go to review 1"></button>
+            <button class="slider-dot" data-slide="1" aria-label="Go to review 2"></button>
+            <button class="slider-dot" data-slide="2" aria-label="Go to review 3"></button>
+            <button class="slider-dot" data-slide="3" aria-label="Go to review 4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------
+         CONTACT & RESERVATIONS SECTION
+         -------------------------------------------------- -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info-panel reveal-left">
+          <span class="section-subtitle">Connect With Us</span>
+          <h2 class="section-title">Visit the Studio</h2>
+          
+          <div class="contact-details">
+            <!-- Detail 1: Address -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h4 class="contact-label">Studio Address</h4>
+                <a href="https://maps.google.com/?q=2321+S+Garfield+Ave,+Monterey+Park,+CA" target="_blank" rel="noopener" class="contact-value">
+                  2321 S Garfield Ave<br>Monterey Park, CA
+                </a>
+              </div>
+            </div>
+
+            <!-- Detail 2: Phone -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <h4 class="contact-label">Phone Contact</h4>
+                <a href="tel:+16262024068" class="contact-value">+1 626-202-4068</a>
+              </div>
+            </div>
+
+            <!-- Detail 3: Email -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="contact-label">Online Inquiries</h4>
+                <a href="mailto:lynhsatran@gmail.com" class="contact-value">lynhsatran@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gray Scale Google Maps Embed -->
+          <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.014569480665!2d-118.1278148!3d34.0177708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cfab3beec0eb%3A0xc3f34e402b8003f5!2s2321%20S%20Garfield%20Ave%2C%20Monterey%20Park%2C%20CA%2091754!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of 2321 S Garfield Ave, Monterey Park, CA"></iframe>
+          </div>
+        </div>
+
+        <div class="form-container reveal-right">
+          <span class="section-subtitle">Reservations</span>
+          <h2 class="section-title" style="margin-bottom: 3.5rem;">Request Appointment</h2>
+
+          <!-- Interactive Request Form -->
+          <form id="studio-contact-form" autocomplete="on">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder=" " required autocomplete="name">
+                <label for="name" class="form-label">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder=" " required autocomplete="tel">
+                <label for="phone" class="form-label">Phone Number</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-input" placeholder=" " required autocomplete="email">
+              <label for="email" class="form-label">Email Address</label>
+            </div>
+            
+            <div class="form-group">
+              <select id="service" name="service" class="form-input select-input" required>
+                <option value="" disabled selected hidden></option>
+                <option value="gel-manicure">Classic Gel Manicure ($45)</option>
+                <option value="acrylic-sets">Sculpted Acrylic Sets ($65)</option>
+                <option value="dip-powder">Signature Dip Powder ($55)</option>
+                <option value="pedicure">Botanical Pedicure ($70)</option>
+                <option value="nail-art">Artisan Nail Art ($20+)</option>
+                <option value="paraffin-care">Organic Paraffin Wax ($40)</option>
+              </select>
+              <label for="service" class="form-label select-label">Select Treatment</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-input textarea-input" placeholder=" " rows="4"></textarea>
+              <label for="message" class="form-label">Preferred Date & Special Notes</label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Send Request</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+
+          <!-- Interactive Success State -->
+          <div id="form-success" class="form-success-container" aria-live="polite">
+            <div class="success-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 class="success-title">Request Transmitted</h3>
+            <p class="success-message">
+              Thank you. Thao or Lynhsa will get in touch with you at the provided phone or email within 24 hours to confirm your treatment slot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- --------------------------------------------------
+       FOOTER
+       -------------------------------------------------- -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <!-- Continuous Wave Shape -->
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,53.3C1120,43,1280,21,1360,10.7L1440,0L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--color-bg-secondary)"></path>
+      </svg>
+    </div>
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-brand-logo">THAO CHAU & LYNHSA</h3>
+            <p class="footer-tagline">A Scandinavian-inspired minimalist nail studio designed to restore, refine, and ground you.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" aria-label="Facebook Page">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" class="social-yelp" aria-label="Yelp Listing">Yelp</a>
+            </div>
+          </div>
+          
+          <div class="footer-hours">
+            <h4 class="footer-title">Hours</h4>
+            <ul class="hours-list">
+              <li><span>Tuesday - Sunday</span> <span>10:00 AM — 7:00 PM</span></li>
+              <li><span>Monday</span> <span>Closed</span></li>
+              <li class="hours-note">* Walk-ins welcome based on availability</li>
+            </ul>
+          </div>
+          
+          <div class="footer-nav">
+            <h4 class="footer-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Curated Services</a></li>
+              <li><a href="#about">Our Philosophy</a></li>
+              <li><a href="#testimonials">Guest Reviews</a></li>
+              <li><a href="#contact">Reserve Studio</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2026 Thao Chau Nguyen - Lynhsa Tran. All rights reserved. Made with love in Monterey Park, CA.</p>
+        </div>
       </div>
     </div>
-    <div class="map-wrap">
-      <iframe
-        title="Thao Chau Nguyen - Lynhsa Tran location"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=2321+S+Garfield+Ave&amp;output=embed">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="footer-inner">
-    <p><strong>Thao Chau Nguyen - Lynhsa Tran</strong> &nbsp;·&nbsp; 2321 S Garfield Ave</p>
-    <p style="margin-top:8px;">+1 626-202-4068</p>
-    <p style="margin-top:12px;">Preview site built by <a href="https://clawops.studio" target="_blank">ClawOps Studio</a></p>
-  </div>
-</footer>
+  <!-- --------------------------------------------------
+       12. SCRIPTS
+       -------------------------------------------------- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --------------------------------------------------
+      // Custom Cursor Trail positioning (Desktop only)
+      // --------------------------------------------------
+      const cursor = document.querySelector('.custom-cursor');
+      const follower = document.querySelector('.custom-cursor-follower');
+      
+      if (window.innerWidth > 1024) {
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+          
+          // Smoothed delayed follower position
+          setTimeout(() => {
+            follower.style.left = e.clientX + 'px';
+            follower.style.top = e.clientY + 'px';
+          }, 40);
+        });
 
-<!-- ===== STICKY CTA ===== -->
-<div class="pad-bottom"></div>
-<div class="sticky-bar">
-  <div class="sticky-bar-info">
-    <div class="sticky-bar-name">Thao Chau Nguyen - Lynhsa Tran</div>
-    <div class="sticky-bar-phone">+1 626-202-4068</div>
-  </div>
-  <a href="tel:+1 626-202-4068" class="sticky-cta">📞 Call Now</a>
-</div>
+        // Toggle hover statuses
+        const hoverables = document.querySelectorAll('a, button, .service-item, .filter-btn, input, textarea, select');
+        hoverables.forEach(item => {
+          item.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovering');
+            follower.classList.add('hovering');
+          });
+          item.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovering');
+            follower.classList.remove('hovering');
+          });
+        });
+      }
 
+      // --------------------------------------------------
+      // Sticky Navigation Scroll Toggle
+      // --------------------------------------------------
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // --------------------------------------------------
+      // Responsive Mobile Nav Toggle
+      // --------------------------------------------------
+      const navToggle = document.querySelector('.nav-toggle');
+      const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+      const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-nav-cta');
+      const body = document.body;
+
+      function toggleMenu() {
+        navToggle.classList.toggle('active');
+        mobileOverlay.classList.toggle('open');
+        body.classList.toggle('menu-open');
+      }
+
+      navToggle.addEventListener('click', toggleMenu);
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (mobileOverlay.classList.contains('open')) {
+            toggleMenu();
+          }
+        });
+      });
+
+      // --------------------------------------------------
+      // Scroll Triggered Reveals (IntersectionObserver)
+      // --------------------------------------------------
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      const observerOptions = {
+        root: null,
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            obs.unobserve(entry.target); // Trigger once
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // --------------------------------------------------
+      // Curated Services Category Filter Logic
+      // --------------------------------------------------
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const serviceItems = document.querySelectorAll('.service-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filterVal = btn.getAttribute('data-filter');
+          
+          serviceItems.forEach(item => {
+            // Fade out animation
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(15px)';
+            
+            setTimeout(() => {
+              if (filterVal === 'all' || item.classList.contains(filterVal)) {
+                item.style.display = 'grid';
+                if (window.innerWidth <= 768) {
+                  item.style.display = 'block';
+                }
+                // Trigger reflow
+                item.offsetHeight;
+                
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              } else {
+                item.style.display = 'none';
+              }
+            }, 300);
+          });
+        });
+      });
+
+      // --------------------------------------------------
+      // Smooth Scroll For Navigation Links With Header Offset
+      // --------------------------------------------------
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 95;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // --------------------------------------------------
+      // Testimonial Slide Carousel Logic
+      // --------------------------------------------------
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.slider-dot');
+      let currentIdx = 0;
+      let sliderInterval;
+
+      function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentIdx = index;
+      }
+
+      function nextSlide() {
+        let next = (currentIdx + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function startAutoplay() {
+        sliderInterval = setInterval(nextSlide, 7000);
+      }
+
+      function stopAutoplay() {
+        clearInterval(sliderInterval);
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          stopAutoplay();
+          showSlide(idx);
+          startAutoplay();
+        });
+      });
+
+      startAutoplay();
+
+      // --------------------------------------------------
+      // Contact Form Submission Action
+      // --------------------------------------------------
+      const contactForm = document.getElementById('studio-contact-form');
+      const formSuccess = document.getElementById('form-success');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        contactForm.style.opacity = '0';
+        contactForm.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+          // Trigger reflow
+          formSuccess.offsetHeight;
+          formSuccess.style.opacity = '1';
+          formSuccess.style.transform = 'translateY(0)';
+        }, 400);
+      });
+    });
+  </script>
 </body>
 </html>
